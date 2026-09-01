@@ -65,5 +65,5 @@ python3 benchmark/benchmark.py
 
 ## Vídeo de apresentação 
 
-Link do vídeo: 
+Link do vídeo: https://www.youtube.com/watch?v=keNLjt_p6VE
 
