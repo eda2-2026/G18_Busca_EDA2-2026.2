@@ -3,13 +3,12 @@ import time
 import random
 from pathlib import Path
 
-sys.path.insert(0, str(Path(_file_).resolve().parent.parent / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from busca_binaria import busca_binaria_iterativa  
 from baseline import busca_sequencial  
 
-# A lista de tamanhos de arrays que serão testados no benchmark
-TAMANHOS = [10*3, 104, 105, 106, 10*7]
+TAMANHOS = [10**3, 10**4, 10**5, 10**6, 10**7]
 REPETICOES = 5  # número de buscas por tamanho, para tirar uma média
 
 
@@ -65,7 +64,6 @@ def plotar_resultados(resultados_binaria, resultados_sequencial):
 
     print("Gráfico salvo em benchmark/resultado.png")
 
-
-if _name_ == "_main_":
+if __name__ == "__main__":
     binaria, sequencial = rodar_benchmark()
     plotar_resultados(binaria, sequencial)
